@@ -1,15 +1,15 @@
 {
-  "name": "My YT Bookmarks",
+  "name": "Leetcode Timer",
   "version": "0.1.0",
-  "description": "Saving timestamps in YT videos",
+  "description": "Countdown timer for your leetcode problems",
   "permissions": ["storage", "tabs"],
-  "host_permissions": ["https://*.youtube.com/*"],
+  "host_permissions": ["https://leetcode.com/problems/*"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://*.youtube.com/*"],
+      "matches": ["https://leetcode.com/problems/*"],
       "js": ["contentScript.js"]
     }
   ],
@@ -30,7 +30,7 @@
       "24": "assets/ext-icon.png",
       "32": "assets/ext-icon.png"
     },
-    "default_title": "My YT Bookmarks",
+    "default_title": "Leetcode Timer",
     "default_popup": "popup.html"
   },
   "manifest_version": 3
